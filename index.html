@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/personalicon.ico" type="image/x-icon">
+    <title>Ben Batres</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/5009ce6fb2.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "YOUR_PUBLIC_KEY",
+        });
+    })();
+    </script>
+</head>
+<body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure>
+                <img id="personal-logo" src="./assets/personalicon.ico" alt="">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#projects" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a>
+                </li>
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black"><i class="fas fa-adjust"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title grey">I'm Ben.</h1>
+                <p class="header__para">
+                    I'm a <b class="grey">Frontend Software Engineer</b> with a strong passion for experiences.
+                    <br>
+                    Here's a bit more <b class="grey click" onclick="toggleModal()">about me.</b>
+                </p>
+                    <div class="social__list">
+                        <a href="#" class="social__link click">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Chaparro-ben" target="_blank" class="social__link click">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="" target="_blank" class="social__link click">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
+                    </div>
+            </div>
+        </header>
+        <a href="#" id="mail__btn">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </a>
+        <a href="#projects" class="scroll" id="scroll">
+            <i class="fas fa-arrow-down"></i>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                <p class="modal__para">
+                    I'm a 19 year-old <b class="grey">Frontend Software Engineer </b>with a strong passtion for developing websites with great <b class="grey">user experiences.</b> 
+                    <br>
+                    I now work on <b class="grey">incredibly challenging</b> engineering challenges and gain knowledge every day from a group of some of the <b class="grey">best experts.</b> 
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/640px-CSS3_logo.svg.png" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" alt="">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png" alt="">
+                        <span class="language__name">React</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half  modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat!
+                </h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">I'm curretly open to new opportunities.</h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input type="text" name="user_name" class="input">
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">E-mail</label>
+                        <input type="email" name="user_email" class="input">
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea type="text" name="message" class="input"></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Send it my way</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon.
+                </div>
+            </div>
+        </div>
+        <img src="./assets/shape-59.svg" class="shape shape--0" alt="">
+        <img src="./assets/shape-62.svg" class="shape shape--1" alt="">
+        <img src="./assets/shape-59.svg" class="shape shape--2" alt="">
+        <img src="./assets/shape-62.svg" class="shape shape--3" alt="">
+        <img src="./assets/shape-58.svg" class="shape shape--4" alt="">
+        <img src="./assets/shape-62.svg" class="shape shape--5" alt="">
+        <img src="./assets/shape-59.svg" class="shape shape--6" alt="">
+        <img src="./assets/shape-62.svg" class="shape shape--7" alt="">
+        <img src="./assets/shape-59.svg" class="shape shape--8" alt="">
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of my <span class="grey">projects</span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/Treact-Project-img.jpg" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Treact Clone Project
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    Html, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    I recreated this project with the skills I learned from Frontend Simplified. I made it responsive on all devices. 
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/Chaparro-ben/projects/blob/master/index.html" class="project__description--link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://chaparro-ben.github.io/projects/" target="_blank" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/MovieAPI-img.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Movie API
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    Html, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    This website I created uses API. This website shows any movie the users searches up and it has a sort selection that sorts from latest to oldest and oldest to latest.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/Chaparro-ben/movie-api" target="_blank" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://movie-api-taupe-five.vercel.app/" target="_blank" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/Library-React-img.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Library React Project
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    Html, CSS, JavaScript, and React
+                                </h4>
+                                <p class="project__description--para">
+                                    In this project I learned how to use componenets, hooks, and props to make a responsive and working website.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/Chaparro-ben/library-react" target="_blank" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://library-react-5dn24pmna-chaparro-bens-projects.vercel.app/" target="_blank" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/Netflix-clone-img.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Netflix Clone
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    TypeScript, JavaScript, and Firebase
+                                </h4>
+                                <p class="project__description--para">
+                                    I created a Netflix clone using React and Firebase to practice building a dynamic and responsive web application. The app fetches data from the TMDb API to display movies and TV shows by category, supports user authentication, and is fully responsive. Through this project, I strengthened my skills in API intergation, React hooks, and UI design.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/Chaparro-ben/netflix-clone" target="_blank" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://netflix-clone-murex-gamma.vercel.app/" target="_blank" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <figure>
+                    <img src="./assets/personalicon.ico" class="footer__logo--img">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="#" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">Git Hub</a>
+                    <a href="#" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">LinkedIn</a>
+                    <a href="#" onclick="toggleModal()" class="footer__social--link link__hover-effect link__hover-effect--white">Contact</a>
+                    <a href="./assets/David Bragg Resume.pdf" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">Resume</a>
+                </div>
+                <div class="footer__copyright">Made by Ben Batres</div>
+            
+            </div>
+        </div>
+    </footer>
+   
+</body>
+</html>
