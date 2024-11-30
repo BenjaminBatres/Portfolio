@@ -639,10 +639,8 @@ footer {
 
 .shape {
     position: fixed;
-    width: 150px;
-    height: 150px;
-   
-
+    width: 120px;
+    height: 120px;
 }
 
 .shape--0 {
@@ -714,6 +712,11 @@ footer {
     .modal__half {
         width: 100%;
     }
+
+    .shape {
+        height: 75px;
+        width: 75px;
+    }
 }
 
 /* Small phones */
@@ -748,6 +751,11 @@ footer {
 
     .modal__half {
         padding: 40px;
+    }
+
+    .shape {
+        width: 50px;
+        height: 50px;
     }
 
 
