@@ -139,6 +139,7 @@ header {
     visibility: hidden;
     transition: all 400ms;
 }
+
 /* 
 
     LANDING PAGE
@@ -594,6 +595,31 @@ nav {
     margin: 16px 0;
 }
 
+/* 
+
+    ONTOUCH EVENT
+
+*/
+
+.onTouch__description--title,
+.onTouch__description--sub-title,
+.onTouch__description--links,
+.onTouch__description--para  {
+    text-align: center;
+}
+
+.onTouch__description--title {
+    margin-top: 32px;
+}
+
+.onTouch__description--para {
+    width: 50%;
+    margin: 12px auto;
+}
+
+.onTouch__description--link {
+    color: #000;
+}
 
 /* 
 
