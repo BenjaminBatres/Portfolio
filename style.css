@@ -604,6 +604,11 @@ nav {
 
 */
 
+#project__transition {
+    transition: all 300ms ease;
+    transition: all 800ms 1200ms;
+}
+
 .onTouch__description--title,
 .onTouch__description--sub-title,
 .onTouch__description--links,

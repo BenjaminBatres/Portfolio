@@ -75,7 +75,7 @@ sr.reveal('.footer__row', {delay:200, origin:'top'});
     
 //     if (displayProject.innerHTML.trim() === "") {
 //         displayProject.innerHTML = `
-//             <div>
+//             <div id="project__transition">
 //                 <h3 class="project__description--title onTouch__description--title">
 //                     Treact Clone Project
 //                 </h3>
@@ -106,7 +106,7 @@ sr.reveal('.footer__row', {delay:200, origin:'top'});
 //     if (displayProject.innerHTML.trim() === "") {
 //         displayProject.innerHTML = 
 //         `
-//             <div>
+//             <div id="project__transition">
 //                 <h3 class="project__description--title onTouch__description--title">
 //                     Movie API
 //                 </h3>
@@ -136,7 +136,7 @@ sr.reveal('.footer__row', {delay:200, origin:'top'});
     
 //     if (displayProject.innerHTML.trim() === "") {
 //         displayProject.innerHTML = `
-//             <div>
+//             <div id="project__transition">
 //                 <h3 class="project__description--title onTouch__description--title">
 //                     Library React Project
 //                 </h3>
@@ -144,7 +144,7 @@ sr.reveal('.footer__row', {delay:200, origin:'top'});
 //                     Html, CSS, JavaScript, and React
 //                 </h4>
 //                 <p class="project__description--para onTouch__description--para">
-//                     In this project I learned how to use componenets, hooks, and props to make a responsive and working website.
+//                     In this project I learned how to use components, hooks, and props to make a responsive and working website.
 //                 </p>
 //                 <div class="project__description--links onTouch__description--links">
 //                     <a href="https://github.com/Chaparro-ben/library-react" class="project__description--link onTouch__description--link" target="_blank">
@@ -159,14 +159,14 @@ sr.reveal('.footer__row', {delay:200, origin:'top'});
 //         displayProject.innerHTML = ""
 //     }
 // }
-// document.querySelector(".library__project").addEventListener("touchstart", displayLibraryProjectDescription)
+// document.querySelector(".library__project").addEventListener("click", displayLibraryProjectDescription)
 
 // function displayNetflixProjectDescription() {
 //     const displayProject = document.querySelector("#netflix__project--description")
     
 //     if (displayProject.innerHTML.trim() === "") {
 //         displayProject.innerHTML = `
-//             <div>
+//             <div id="project__transition">
 //                 <h3 class="project__description--title onTouch__description--title">
 //                     Netflix Clone
 //                 </h3>
