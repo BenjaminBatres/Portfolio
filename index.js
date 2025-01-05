@@ -48,11 +48,11 @@ let isModalOpen = false;
 function toggleModal() {
     if (isModalOpen) {
         isModalOpen = false
-        return document.body.classList.remove('modal--open')
+        return document.body.classList.remove('modal--open', 'scroll--hidden')
     }
     // toggle modal
     isModalOpen = true
-    document.body.classList += " modal--open"
+    document.body.classList += " modal--open scroll--hidden"
 }
 
 // FADE IN ANIMATION
@@ -104,7 +104,8 @@ function displayMovieAPIProjectDescription() {
     const displayProject = document.querySelector("#movie__API--description")
     
     if (displayProject.innerHTML.trim() === "") {
-        displayProject.innerHTML = `
+        displayProject.innerHTML = 
+        `
             <div>
                 <h3 class="project__description--title onTouch__description--title">
                     Movie API
