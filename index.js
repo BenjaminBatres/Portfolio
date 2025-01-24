@@ -58,17 +58,17 @@ function toggleModal() {
 // FADE IN ANIMATION
 const sr = ScrollReveal ({
     distance: '65px',
-    duration: 2600,
+    duration: 3000,
     delay: 650,
     reset: false,
 }) 
 
-sr.reveal('.nav__link--list', {delay:550, origin:'top'});
-sr.reveal('#personal-logo', {delay:550, origin:'top'});
-sr.reveal('.header__content', {delay:300, origin:'bottom'});
-sr.reveal('.section__title', {delay:300, origin:'bottom'});
-sr.reveal('.project', {delay:200, origin:'left'});
-sr.reveal('.footer__row', {delay:200, origin:'top'});
+// sr.reveal('.nav__link--list', {delay:550, origin:'top'});
+// sr.reveal('#personal-logo', {delay:550, origin:'top'});
+sr.reveal('.social__list', {delay:600, origin:'bottom'});
+// sr.reveal('.section__title', {delay:300, origin:'bottom'});
+// sr.reveal('.project', {delay:200, origin:'left'});
+// sr.reveal('.footer__row', {delay:200, origin:'top'});
 
 // function displayTreactCloneProjectDescription() {
 //     const displayProject = document.querySelector("#treact__project--description")

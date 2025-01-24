@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/5009ce6fb2.js" crossorigin="anonymous"></script>
     <script src="index.js" defer></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -22,11 +23,11 @@
 </head>
 <body>
     <section id="landing-page" onmousemove="moveBackground(event)">
-        <nav>
-            <figure>
+        <nav data-aos="fade-down" data-aos-duration="2000" data-aos-delay="50">
+            <figure >
                 <img id="personal-logo" src="./assets/personalicon.ico" alt="">
             </figure>
-            <ul class="nav__link--list">
+            <ul class="nav__link--list" >
                 <li class="nav__link">
                     <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black" onclick="toggleModal()">About</a>
                 </li>
@@ -43,34 +44,38 @@
         </nav>
         <header>
             <div class="header__content">
-                <h1 class="title">Hey</h1>
-                <h1 class="title grey">I'm Ben.</h1>
-                <p class="header__para">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                    <h1 class="title">Hey</h1>
+                    <h1 class="title grey">I'm Ben.</h1>
+                </div>
+                <p class="header__para" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
                     I'm a <b class="grey">Frontend Software Engineer</b> with a strong passion for experiences.
                     <br>
                     Here's a bit more <b class="grey click" onclick="toggleModal()">about me.</b>
                 </p>
-                    <div class="social__list">
-                        <a href="https://www.linkedin.com/in/benjamin-batres-b47994343/" class="social__link click">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/Chaparro-ben" target="_blank" class="social__link click">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="" target="_blank" class="social__link click">
-                            <i class="fas fa-file-pdf"></i>
-                        </a>
-                    </div>
+                <div class="social__list">
+                    <a href="https://www.linkedin.com/in/benjamin-batres-9216b5329/" class="social__link click">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/BenjaminBatres" target="_blank" class="social__link click">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="" target="_blank" class="social__link click">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
             </div>
         </header>
-        <a href="#" id="mail__btn">
-            <button class="mail__btn click" onclick="toggleModal()">
-                <i class="fas fa-envelope"></i>
-            </button>
-        </a>
-        <a href="#projects" class="scroll" id="scroll">
-            <i class="fas fa-arrow-down"></i>
-        </a>
+        <div data-aos="fade-in" data-aos-duration="2000" data-aos-delay="750">
+            <a href="#" id="mail__btn">
+                <button class="mail__btn click" onclick="toggleModal()">
+                    <i class="fas fa-envelope"></i>
+                </button>
+            </a>
+            <a href="#projects" class="scroll" id="scroll">
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
         <div class="modal">
             <div class="modal__half modal__about">
                 <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
@@ -128,24 +133,26 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/shape-59.svg" class="shape shape--0" alt="">
-        <img src="./assets/shape-62.svg" class="shape shape--1" alt="">
-        <img src="./assets/shape-59.svg" class="shape shape--2" alt="">
-        <img src="./assets/shape-62.svg" class="shape shape--3" alt="">
-        <img src="./assets/shape-58.svg" class="shape shape--4" alt="">
-        <img src="./assets/shape-62.svg" class="shape shape--5" alt="">
-        <img src="./assets/shape-59.svg" class="shape shape--6" alt="">
-        <img src="./assets/shape-62.svg" class="shape shape--7" alt="">
-        <img src="./assets/shape-59.svg" class="shape shape--8" alt="">
+        <div data-aos="fade-in" data-aos-duration="2500">
+            <img src="./assets/shape-59.svg" class="shape shape--0" alt="">
+            <img src="./assets/shape-62.svg" class="shape shape--1" alt="">
+            <img src="./assets/shape-59.svg" class="shape shape--2" alt="">
+            <img src="./assets/shape-62.svg" class="shape shape--3" alt="">
+            <img src="./assets/shape-58.svg" class="shape shape--4" alt="">
+            <img src="./assets/shape-62.svg" class="shape shape--5" alt="">
+            <img src="./assets/shape-59.svg" class="shape shape--6" alt="">
+            <img src="./assets/shape-62.svg" class="shape shape--7" alt="">
+            <img src="./assets/shape-59.svg" class="shape shape--8" alt="">
+        </div>
     </section>
     <section id="projects">
         <div class="container">
             <div class="row">
-                <h1 class="section__title">
+                <h1 class="section__title" data-aos="fade-in" data-aos-duration="2000">
                     Here are some of my <span class="grey">projects</span>
                 </h1>
                 <ul class="project__list">
-                    <li class="project">
+                    <li class="project" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="50">
                         <div class="project__wrapper">
                             <img src="./assets/Treact-Project-img.jpg" class="project__img" alt="">
                             <div class="project__wrapper--bg treact__project"></div>
@@ -169,9 +176,8 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 id="treact__project--description"></h3>
                     </li>
-                    <li class="project">
+                    <li class="project" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="150">
                         <div class="project__wrapper">
                             <img src="./assets/MovieApi-img.png" class="project__img" alt="">
                             <div class="project__wrapper--bg movie__API"></div>
@@ -195,9 +201,8 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 id="movie__API--description"></h3>
                     </li>
-                    <li class="project">
+                    <li class="project" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="250">
                         <div class="project__wrapper">
                             <img src="./assets/Library-React-img.png" class="project__img" alt="">
                             <div class="project__wrapper--bg library__project"></div>
@@ -221,9 +226,8 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 id="library__project--description"></h3>
                     </li>
-                    <li class="project">
+                    <li class="project" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="350">
                         <div class="project__wrapper">
                             <img src="./assets/Netflix-clone-img.png" class="project__img" alt="">
                             <div class="project__wrapper--bg netflix__project"></div>
@@ -247,7 +251,31 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 id="netflix__project--description"></h3>
+                    </li>
+                    <li class="project" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="350">
+                        <div class="project__wrapper">
+                            <img src="./assets/Ultraverse-Market-img.jpg" class="project__img" alt="">
+                            <div class="project__wrapper--bg netflix__project"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Ultraverse Market
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    JavaScript, React, and Hooks
+                                </h4>
+                                <p class="project__description--para">
+                                    In this project, I completely transformed a static HTML, CSS, JavaScript, and React single-page application into an interactive user interface using animations, transitions, and carousels. I fetched the user's data from an API request and made it dynamic. I utilized Git version controls and interface to work and thrive in a virtual and collaborative team environment.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/BenjaminBatres/ben-internship" target="_blank" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://ben-internship-murex.vercel.app/" target="_blank" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -257,20 +285,22 @@
     <footer>
         <div class="container">
             <div class="row footer__row">
-                <figure>
+                <figure  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="50">
                     <img src="./assets/personalicon.ico" class="footer__logo--img">
                 </figure>
-                <div class="footer__social--list">
-                    <a href="#" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">Git Hub</a>
-                    <a href="#" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">LinkedIn</a>
+                <div class="footer__social--list"  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="250">
+                    <a href="https://github.com/BenjaminBatres" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">Git Hub</a>
+                    <a href="https://www.linkedin.com/in/benjamin-batres-9216b5329/" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">LinkedIn</a>
                     <a href="#" onclick="toggleModal()" class="footer__social--link link__hover-effect link__hover-effect--white">Contact</a>
                     <a href="./assets/David Bragg Resume.pdf" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">Resume</a>
                 </div>
-                <div class="footer__copyright">Made by Ben Batres</div>
-            
+                <div class="footer__copyright"  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">Made by Ben Batres</div>
             </div>
         </div>
     </footer>
-   
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init()
+      </script>
 </body>
 </html>
