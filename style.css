@@ -500,7 +500,7 @@ nav {
 }
 
 .light-theme .link__hover-effect--black::after {
-    background-color: #faf7ff;
+    background-color: #242424;
 }
 
 .light-theme .mail__btn {
