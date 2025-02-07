@@ -3,10 +3,10 @@ const scaleFactor = 1 / 20
 function toggleContrast() {
     contrastToggle = !contrastToggle
     if (contrastToggle) {
-        document.body.classList += " dark-theme"
+        document.body.classList += " light-theme"
     }
     else {
-        document.body.classList.remove("dark-theme")
+        document.body.classList.remove("light-theme")
     }
 }
 
